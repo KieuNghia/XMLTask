@@ -1,0 +1,40 @@
+{
+  "Manufacturer": {
+    "Beer": [
+      {
+        "-id": "1",
+        "name": "beer",
+        "type": "lager",
+        "al": "1",
+        "manufacturer": "beer maker",
+        "ingredients": "water, salt, salt",
+        "chars": {
+          "ABW": "4",
+          "filtered": "1",
+          "foodValue": "400",
+          "bottleCharacteristic": {
+            "volume": "500",
+            "bottleType": "plastic"
+          }
+        }
+      },
+      {
+        "-id": "2",
+        "name": "beer",
+        "type": "lager",
+        "al": "1",
+        "manufacturer": "beer maker",
+        "ingredients": "water, salt, salt",
+        "chars": {
+          "ABW": "4",
+          "filtered": "1",
+          "foodValue": "400",
+          "bottleCharacteristic": {
+            "volume": "500",
+            "bottleType": "glass"
+          }
+        }
+      }
+    ]
+  }
+}

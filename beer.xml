@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Manufacturer>
+    <Beer id="1">
+        <name>beer</name>
+        <type>lager</type>
+        <al>1</al>
+        <manufacturer>beer maker</manufacturer>
+          <ingredients>water, salt, salt</ingredients>
+        <chars>
+            <ABW>4</ABW>
+            <filtered>1</filtered>
+            <foodValue>400</foodValue>
+            <bottleCharacteristic>
+                <volume>500</volume>
+                <bottleType>plastic</bottleType>
+            </bottleCharacteristic>
+
+        </chars>
+    </Beer>
+	
+	<Beer id="2">
+        <name>beer</name>
+        <type>lager</type>
+        <al>1</al>
+        <manufacturer>beer maker</manufacturer>
+        <ingredients>water, salt, salt</ingredients>
+        <chars>
+            <ABW>4</ABW>
+            <filtered>1</filtered>
+            <foodValue>400</foodValue>
+            <bottleCharacteristic>
+                <volume>500</volume>
+                <bottleType>glass</bottleType>
+            </bottleCharacteristic>
+
+        </chars>
+    </Beer>
+</Manufacturer>
