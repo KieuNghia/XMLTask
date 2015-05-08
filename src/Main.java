@@ -7,13 +7,16 @@ import java.io.IOException;
  */
 public class Main {
     public static void main(String[] args){
-        System.out.println(BeerFactory.beerBuilder("DOM"));
-        System.out.println(BeerFactory.beerBuilder("JDOM"));
-        System.out.println(BeerFactory.beerBuilder("SAX"));
+        System.out.println("DOM PARSER");
+       System.out.println(BeerFactory.beerBuilder("DOM"));
+        System.out.println("JDOM PARSER");
+       System.out.println(BeerFactory.beerBuilder("JDOM"));
+        System.out.println("SAX PARSER");
+       System.out.println(BeerFactory.beerBuilder("SAX"));
 
-        JSONParserClass jsonParserClass = new JSONParserClass();
+        //JSONParserClass jsonParserClass = new JSONParserClass();
 
-        System.out.println(jsonParserClass.JSONtoObj());
+       // System.out.println(jsonParserClass.JSONtoObj());
 
     }
 }

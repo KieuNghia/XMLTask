@@ -1,8 +1,6 @@
 import java.util.ArrayList;
 
-/**
- * Created by Kuanh_Nhkhiia_Kiieu on 5/6/2015.
- */
+
 public class Beer {
     private String name;
     private String type;

@@ -17,7 +17,7 @@ public class SAXParserClass extends AbstractBuilder {
             DefaultHandler defaultHandler = new DefaultHandler() {
                 boolean bBeer = false;
                 boolean bName = false;
-                boolean btype = false;
+                boolean bType = false;
                 boolean bAl = false;
                 boolean bManufacturer = false;
                 boolean bIngredients = false;
@@ -36,7 +36,7 @@ public class SAXParserClass extends AbstractBuilder {
                         bName = true;
                     }
                     if (qName.equalsIgnoreCase("TYPE")) {
-                        btype = true;
+                        bType = true;
                     }
 
                     if (qName.equalsIgnoreCase("AL")) {
@@ -66,16 +66,26 @@ public class SAXParserClass extends AbstractBuilder {
                     if (qName.equalsIgnoreCase("BOTTLEVOLUME")) {
                         bBottleVolume = true;
                     }
+                    if (qName.equalsIgnoreCase("BOTTLETYPE")){
+                        bBbottleType = true;
+                    }
+
+
                 }
 
-                /*  public void endElement(String uri, String localName, String qName) throws SAXException {
-                      System.out.println("End element: " + qName);
-                  }*/
+                public void endElement(String uri, String localName,
+                                       String qName) throws SAXException {
+
+                }
+
+
                 Beer b;
 
                 public void characters(char ch[], int start, int length) throws SAXException {
                     if (bBeer) {
                         b = new Beer();
+                        beers.add(b);
+
                         bBeer = false;
 
                     }
@@ -83,19 +93,19 @@ public class SAXParserClass extends AbstractBuilder {
                         b.setName(new String(ch, start, length));
                         bName = false;
                     }
-                    if (btype) {
+                    if (bType) {
                         b.setType(new String(ch, start, length));
-                        btype = false;
+                        bType = false;
                     }
                     if (bAl) {
                         b.setAl(new String(ch, start, length));
                         bAl = false;
                     }
 
-                    if (bManufacturer) {
+                    /*if (bManufacturer) { ????
                         b.setManufacturer(new String(ch, start, length));
                         bManufacturer = false;
-                    }
+                    }*/
 
                     if (bIngredients) {
                         b.setIngredients(new String(ch, start, length));
@@ -121,9 +131,10 @@ public class SAXParserClass extends AbstractBuilder {
                     if (bBbottleType) {
                         b.setBottleType(new String(ch, start, length));
                         bBbottleType = false;
-                        beers.add(b);
 
                     }
+
+
 
 
                 }
