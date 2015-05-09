@@ -66,16 +66,16 @@ public class SAXParserClass extends AbstractBuilder {
                     if (qName.equalsIgnoreCase("BOTTLEVOLUME")) {
                         bBottleVolume = true;
                     }
-                    if (qName.equalsIgnoreCase("BOTTLETYPE")){
-                        bBbottleType = true;
-                    }
+
 
 
                 }
 
                 public void endElement(String uri, String localName,
                                        String qName) throws SAXException {
-
+                    if (qName.equalsIgnoreCase("BOTTLETYPE")){
+                        bBbottleType = true;
+                    }
                 }
 
 
@@ -84,7 +84,6 @@ public class SAXParserClass extends AbstractBuilder {
                 public void characters(char ch[], int start, int length) throws SAXException {
                     if (bBeer) {
                         b = new Beer();
-                        beers.add(b);
 
                         bBeer = false;
 
@@ -131,6 +130,8 @@ public class SAXParserClass extends AbstractBuilder {
                     if (bBbottleType) {
                         b.setBottleType(new String(ch, start, length));
                         bBbottleType = false;
+                        beers.add(b);
+
 
                     }
 
